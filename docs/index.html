@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
     <!-- 在标签中的图标 -->
     <link rel="icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202209291356476.jpg">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
     <!-- 文件夹样式 -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />  -->
     <link rel="stylesheet" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/folder_file.css" /> 
@@ -200,7 +200,7 @@
           trigger: 100,
           bottomOffset: 52,
           locationOffset: 25,
-          //title: 'TOP',
+          // title: 'TOP',
           titleAsText: true
         });
       });
@@ -212,7 +212,7 @@
 
     
     <!-- 看板娘 -->
-    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<!--     <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
     <script>
       L2Dwidget.init({
         "model": {
@@ -237,7 +237,7 @@
           "opacityOnHover": 0.2
         }
       });
-    </script>
+    </script> -->
 
     <!-- 看板娘2 -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
@@ -271,9 +271,10 @@
     </script> -->
 
 
+    <!-- gitalk 评论 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+    
     <script>
       let client_id = '06261ec18e4260f1a013';
       let client_secret = '80614f70099af49c2c790c77b6a66468017b0d51';
@@ -295,8 +296,6 @@
         props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
       }
     </script>
-
-        
 
 
   </body>
