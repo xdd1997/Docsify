@@ -24,6 +24,7 @@
   <body>
     <div id="app"></div>
     <script>  
+      
       window.$docsify = {
         name: "=== xdd1997 === ",
         repo: 'https://gitee.com/xdd1997/docsifyWeb',
@@ -87,47 +88,33 @@
         // 添加页脚
         footer: {
           copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
-          auth: ' <a href="https://gitee.com/xdd1997/" target="_blank">🏷️ xdd1997 🏷️ </a>',
+          auth: ' <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>',
           // pre: '<hr/>',
           style: 'text-align: center;',
         },
 
 
+        // // 来必力评论
+        // plugins: [
+        // function (hook, vm) {
+        //   // load livere
+        //   hook.beforeEach(function(content) {
+        //     var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81NzY5Ny8zNDE2MA=='></div>\n\n----\n"
+        //     return content + comment;
+        //   });
 
-        // 来必力评论
-        plugins: [
-        function (hook, vm) {
-          // load livere
-          hook.beforeEach(function(content) {
-            var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81NzY5Ny8zNDE2MA=='></div>\n\n----\n"
-            return content + comment;
-          });
-
-
-          // hook.beforeEach(function(content) {
-          //     var copyRight = '文章作者: [TaQini](mailto:742954809@qq.com) \n\n'+'文章链接: '+url+'\n\n'
-          //     +'版权声明: 本博客所有文章除特别声明外，均采用'+
-          //         '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。\n\n'
-          //     +'转载请注明来自[TaQini](http://taqini.space)！\n'
-          //     return content + copyRight;
-          // });
-
-
-          hook.doneEach(function() {
-            (function(d, s) {
-              var j, e = d.getElementsByTagName(s)[0];
-              if (typeof LivereTower === 'function') { return; }
-              j = d.createElement(s);
-              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-              j.async = true;
-              e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                      });
-                    },
-                  ]
-
-
-
+        //   hook.doneEach(function() {
+        //     (function(d, s) {
+        //       var j, e = d.getElementsByTagName(s)[0];
+        //       if (typeof LivereTower === 'function') { return; }
+        //       j = d.createElement(s);
+        //       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        //       j.async = true;
+        //       e.parentNode.insertBefore(j, e);
+        //                 })(document, 'script');
+        //               });
+        //             },
+        //           ]
 
 
       };
@@ -138,16 +125,6 @@
     <!-- <script src="https://notebook.js.org/plugin/docsify-footer-enh.min.js"></script> -->
     <script src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/botton.js"></script>
     
-
-
-
-
-
-
-
-
-
-
 
     <!-- docsify -->
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>  
