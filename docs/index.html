@@ -23,9 +23,11 @@
   </head>
   <body>
     <div id="app"></div>
+    
     <script>  
       
       window.$docsify = {
+
         name: "=== xdd1997 === ",
         logo: 'https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202211281644788.png',
         repo: 'https://gitee.com/xdd1997/docsifyWeb',
@@ -41,8 +43,8 @@
 
         notFoundPage: 'error.md',
 
-        // 更新日期格式
-        formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}', //变量显示文档更新日期
+
+        
         //coverpage: true,
         // PLUGINS
         // ----------------------------------------------------------------
@@ -83,14 +85,24 @@
           isExpected: true,
         },
         editLink: {
-            text: 'Edit this document',
+            text: '📝Edit this document',
             // text: '<span style="color: limegreen;">Edit this document</span>',
             repo: 'https://gitee.com/xdd1997/docsifyWeb/edit/master/docs/',
             // repo: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/',
             cssClass: 'docsify-edit-link m-0'
-          },
+                  },
 
-        // 添加页脚
+        timeUpdater: {
+              text: "<div align='left' width='200px' style='color:green;font-size:16px'>Posted @ xdd1997 at  {docsify-updated}</div>",
+              formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+              whereToPlace: "bottom"  // "top" or "bottom", default to "bottom"
+
+                      },
+
+
+
+
+        // 添加页脚，邮箱与赞赏
         footer: {
           copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
           auth: '<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/20221128160840.png"/></a>',
@@ -121,18 +133,9 @@
         //             },
         //           ]
 
-          plugins: [
-              
-              function(hook, vm) {
-                hook.beforeEach(function(html) {
-                  return html + '\n' + '⏰ 更新于： {docsify-updated} ';
-                                                });
-                                  }
 
 
 
-
-                    ],
 
 
 
@@ -175,6 +178,9 @@
 
     <!-- 侧边栏目录折叠 -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+    <!-- 文档更新日期 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
 
     <!-- 页面右侧 TOC -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
@@ -238,8 +244,7 @@
 
 
     <!-- Gitalk 评论系统 -->
-    <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
-    <!-- Gitalk 评论系统 -->
+<!--     <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
     <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
     <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
     <script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
@@ -262,6 +267,32 @@
         if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
           location.reload()
         }
+      }
+    </script> -->
+
+
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+    <script>
+      let client_id = '06261ec18e4260f1a013';
+      let client_secret = '80614f70099af49c2c790c77b6a66468017b0d51';
+
+      let props = {
+        clientID: client_id,
+        clientSecret: client_secret,
+        repo: 'docsify',
+        owner: 'xdd1997',
+        admin: ['xdd1997'],
+        distractionFreeMode: false,
+        id: decodeURI(location.hash.split('?')[0]),
+        language: 'en',
+      };
+      let gitalk = new Gitalk(props);
+      // 哈希路由切换时 重新加载Gitalk
+      window.addEventListener('hashchange', onHashChange);
+      function onHashChange() {
+        props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
       }
     </script>
 
