@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
     <!-- 在标签中的图标 -->
     <link rel="icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202209291356476.jpg">
+    <!-- gitalk -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+    <!-- docsify-dark-mode -->
+    <!-- <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" > -->
     <!-- 文件夹样式 -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />  -->
     <link rel="stylesheet" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/folder_file.css" /> 
@@ -31,6 +34,9 @@
         name: "=== xdd1997 === ",
         logo: 'https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202211281644788.png',
         repo: 'https://gitee.com/xdd1997/docsifyWeb',
+
+        // for docsify-dark-mode
+        // themeColor: "#42b983",
         // 侧边栏文档目录
         loadSidebar: true,
         // 顶部导航栏
@@ -62,6 +68,7 @@
           // 避免搜索索引冲突,同一域下的多个网站之间
           namespace: "website-1",
         },
+        
         // 底部导航
         pagination: {
           previousText: "上一页",
@@ -69,14 +76,15 @@
           crossChapter: true,
           crossChapterText: true,
         },
+
         // 字数统计
         count: {
           countable: true,
           position: "top",
-          margin: "10px",
-          float: "right",
+          margin: "5px",
+          float: "left",
           fontsize: "0.9em",
-          color: "blue",
+          color: "#42b983",
           language: "chinese",
           localization: {
             words: "",
@@ -84,6 +92,7 @@
           },
           isExpected: true,
         },
+
         editLink: {
             text: '📝Edit this document',
             // text: '<span style="color: limegreen;">Edit this document</span>',
@@ -99,6 +108,18 @@
 
                       },
 
+        // darkMode: {
+        //       dark: {
+        //         background: "#1c2022",
+        //         toggleBtnBg: "#34495e",
+        //         textColor: "#b4b4b4"
+        //               },
+        //       light: {
+        //         background: "white",
+        //         toggleBtnBg: "var(--theme-color)",
+        //         textColor: "var(--theme-color)"
+        //               }
+        //           },
 
 
 
@@ -142,6 +163,8 @@
       };
     </script>
 
+    <!-- docsify-dark-mode -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script> -->
     
     <!-- 添加页脚 -->
     <!-- <script src="https://notebook.js.org/plugin/docsify-footer-enh.min.js"></script> -->
