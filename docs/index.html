@@ -27,6 +27,7 @@
       
       window.$docsify = {
         name: "=== xdd1997 === ",
+        logo: 'https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202211281644788.png',
         repo: 'https://gitee.com/xdd1997/docsifyWeb',
         // 侧边栏文档目录
         loadSidebar: true,
@@ -38,13 +39,17 @@
         // 跳转后自动到顶部
         auto2top: true,
 
+        notFoundPage: 'error.md',
+
+        // 更新日期格式
+        formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}', //变量显示文档更新日期
         //coverpage: true,
         // PLUGINS
         // ----------------------------------------------------------------
         // 页面右侧toc
         toc: {
           tocMaxLevel: 3,
-          target: "h2, h3, h4, h5, h6",
+          target: "h2, h3",
         },
 
         // 全文搜索
@@ -115,6 +120,20 @@
         //               });
         //             },
         //           ]
+
+          plugins: [
+              
+              function(hook, vm) {
+                hook.beforeEach(function(html) {
+                  return html + '\n' + '⏰ 更新于： {docsify-updated} ';
+                                                });
+                                  }
+
+
+
+
+                    ],
+
 
 
       };
