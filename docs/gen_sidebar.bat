@@ -1,5 +1,7 @@
+@echo off
+
 cd /d %~dp0
 
 python auto_creat_sidebar.py
 
-timeout /nobreak /t 5
+rem timeout /nobreak /t 5
