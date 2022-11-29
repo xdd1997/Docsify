@@ -9,6 +9,9 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
 
+
+
+
         <!-- 在标签中的图标 -->
         <link rel="icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202209291356476.jpg">
 
@@ -22,12 +25,39 @@
         <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />  -->
         <link rel="stylesheet" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/folder_file.css" /> 
         
-
-
+        
+        <!-- PC端打开 live2d -->
+        var system ={};  
+        var p = navigator.platform;       
+        system.win = p.indexOf("Win") == 0;  
+        system.mac = p.indexOf("Mac") == 0;  
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+        if(system.win||system.mac||system.xll){//如果是电脑跳转到
+            <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>;
+            <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.css"/>;
+            <div class="waifu">
+                  <div class="waifu-tips"></div>
+                  <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+                  <div class="waifu-tool">
+                            <!-- <span class="fui-home"></span> -->
+                            <!-- <span class="fui-chat"></span> -->
+                            <span class="fui-eye"></span>
+                            <span class="fui-user"></span>
+                            <!-- <span class="fui-photo"></span> -->
+                            <span class="fui-info-circle"></span>
+                            <span class="fui-cross"></span>
+                  </div>
+            </div>
+            <script src="live2d/assets/waifu-tips.js"></script>
+            <script src="live2d/assets/live2d.js"></script>
+            <script type="text/javascript">initModel("live2d/assets/")</script>
+                                              }
 
       </head>
       <body>
         <div id="app"></div>
+
+
         
         <script>  
           
@@ -101,16 +131,17 @@
             },
 
             editLink: {
-                text: '📝Edit this document',
+                // text: '📝Edit this document',
+                text: '📝编辑👈  👉 <a href="https://github.com/xdd1997/docsify/issues" ">反馈💬</a>',
+                
                 // text: '<span style="color: limegreen;">Edit this document</span>',
-                repo: 'https://gitee.com/xdd1997/docsifyWeb/edit/master/docs/',
+                repo: 'https://github.com/xdd1997/docsify/edit/master/docs/',
                 // repo: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/',
                 cssClass: 'docsify-edit-link m-0'
                       },
 
             timeUpdater: {
-                  text: "<div align='left' width='200px' style='color:green;font-size:16px'>Posted @ xdd1997 at  {docsify-updated}</div>",
-                  formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+                  text: "<div align='left' width='200px' style='color:green;font-size:16px'><br> <blockquote><p>Posted by @ xdd1997 @ {docsify-updated}</p></blockquote></div>",                  formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
                   whereToPlace: "bottom"  // "top" or "bottom", default to "bottom"
 
                           },
@@ -133,8 +164,8 @@
             // 添加页脚，邮箱与赞赏
             footer: {
               copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
-              auth: '<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green"/></a>',
-              // pre: '<hr/>',
+              auth: '<p>如果您有建站建议或对文章有什么意见，请在<a href="https://github.com/xdd1997/docsify/issues" target="_blank" rel="noopener noreferrer">issue</a>提交，紧急情况可邮箱联系 <br><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green"/></a></p>',
+              pre: '<hr/>',
               style: 'text-align: center;',
             },
 
@@ -145,7 +176,7 @@
             //   // load livere
             //   hook.beforeEach(function(content) {
             //     var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81MDc3MS8yNzI1Mw=='></div>\n\n----\n"
-            //     return content + comment;
+            //     return content + '\n' + comment;
             //   });
 
             //   hook.doneEach(function() {
@@ -233,8 +264,8 @@
           $(document).ready(function () {
             $.goup({
               trigger: 100,
-              bottomOffset: 52,
-              locationOffset: 25,
+              bottomOffset: 5,
+              locationOffset: 5,
               // title: 'TOP',
               titleAsText: true
             });
@@ -245,37 +276,6 @@
         <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 
 
-        
-        <!-- 看板娘 -->
-    <!--     <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-        <script>
-          L2Dwidget.init({
-            "model": {
-              //jsonpath控制显示那个小萝莉模型，
-              //(切换模型需要改动)
-              jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
-              "scale": 1
-            },
-            "display": {
-              "position": "right", //看板娘的表现位置
-              "width": 70,  //小萝莉的宽度
-              "height": 140, //小萝莉的高度
-              "hOffset": 35,
-              "vOffset": -20
-            },
-            "mobile": {
-              "show": true,
-              "scale": 0.5
-            },
-            "react": {
-              "opacityDefault": 0.7,
-              "opacityOnHover": 0.2
-            }
-          });
-        </script> -->
-
-        <!-- 看板娘2 -->
-        <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
 
 
         <!-- Gitalk 评论系统 -->
@@ -307,10 +307,10 @@
 
 
         <!-- gitalk 评论 -->
-        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        <!--         <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script> -->
         
-    <!--     <script>
+        <!--     <script>
           let client_id = '06261ec18e4260f1a013';
           let client_secret = '80614f70099af49c2c790c77b6a66468017b0d51';
 
@@ -335,7 +335,7 @@
 
 
           <!-- giscus 评论 -->
-    <!--     <script src="https://giscus.app/client.js"
+          <!--     <script src="https://giscus.app/client.js"
             data-repo="xdd1997/docsify"
             data-repo-id="R_kgDOIg7OMQ"
             data-category="General"
