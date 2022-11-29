@@ -6,7 +6,7 @@
 
 3. [https://xdd1997.github.io/docsify](https://xdd1997.github.io/docsify)
 
-4. [https://xdd1997.gitee.io/docsifyweb](https://xdd1997.gitee.io/docsifyweb)
+4. [https://xdd1997.gitee.io/docsify](https://xdd1997.gitee.io/docsify)
 
    
 
