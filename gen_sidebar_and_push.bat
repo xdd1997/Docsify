@@ -6,4 +6,4 @@ set curPath = %cd%
 cd docs
 call gen_sidebar.bat
 cd ../
-call push-to-remote.bat
+call push.bat

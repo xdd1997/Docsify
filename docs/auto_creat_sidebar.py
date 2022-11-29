@@ -9,7 +9,7 @@ from shutil import copyfile
 
 
 # low->high: DEBUG-INFO-WARN-ERROR-CRITICAL
-logging.basicConfig(level=logging.DEBUG, format='%(levelname)8s:%(message)s')
+logging.basicConfig(level=logging.INFO, format='%(levelname)8s:%(message)s')
 logging.info('*' * 80)
 
 def remove_digits_front_of_string(strOld:str) -> str:
@@ -35,7 +35,7 @@ def deal_fileName_with_space():
             tmp = os.path.join(root, name)
             if os.path.isfile(tmp):
                 fileList.append(tmp)
-    print(fileList) 
+
 
     for ii in fileList:
         name = os.path.basename(ii)
@@ -74,10 +74,8 @@ def gen_sidebar():
 
                     
                     if os.path.isdir(tt5):
-                        print('tt5='+ tt5)
                         tmp = f'/md_File/{ii}/{jj}'
                         ttt = os.path.join(tmp02,jj)
-                        print(ttt)
                         jjNew = remove_digits_front_of_string(jj)
 
                         fw.write('\n')
@@ -107,7 +105,6 @@ def gen_sidebar():
             tt = os.path.join(dir_path,ii)
             if os.path.isfile(tt):
                 tmp = f'/md_File/{ii}'
-                print(tmp)
                 iiNew = remove_digits_front_of_string(ii)
                 fw.write(f'* [{iiNew}]({tmp})' + '\n')
 
