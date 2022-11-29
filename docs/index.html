@@ -2,324 +2,359 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+      <head>
 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
-    <!-- 在标签中的图标 -->
-    <link rel="icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202209291356476.jpg">
-    <!-- gitalk -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
-    <!-- docsify-dark-mode -->
-    <!-- <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" > -->
-    <!-- 文件夹样式 -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />  -->
-    <link rel="stylesheet" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/folder_file.css" /> 
-    
-    <!-- 箭头样式 -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+        <!-- 在标签中的图标 -->
+        <link rel="icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202209291356476.jpg">
 
+        <!-- gitalk -->
+        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" /> -->
 
-  </head>
-  <body>
-    <div id="app"></div>
-    
-    <script>  
-      
-      window.$docsify = {
+        <!-- docsify-dark-mode -->
+        <!-- <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" > -->
 
-        name: "=== xdd1997 === ",
-        logo: 'https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202211281644788.png',
-        repo: 'https://gitee.com/xdd1997/docsifyWeb',
-
-        // for docsify-dark-mode
-        // themeColor: "#42b983",
-        // 侧边栏文档目录
-        loadSidebar: true,
-        // 顶部导航栏
-        loadNavbar: true,
-
-        // 左边文档展示层级
-        subMaxLevel: 0,
-        // 跳转后自动到顶部
-        auto2top: true,
-
-        notFoundPage: 'error.md',
-
-
+        <!-- 文件夹样式 -->
+        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />  -->
+        <link rel="stylesheet" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/folder_file.css" /> 
         
-        //coverpage: true,
-        // PLUGINS
-        // ----------------------------------------------------------------
-        // 页面右侧toc
-        toc: {
-          tocMaxLevel: 3,
-          target: "h2, h3",
-        },
 
-        // 全文搜索
-        search: {
-          depth: 6,
-          noData: "没有搜到!",
-          placeholder: "搜索...",
-          // 避免搜索索引冲突,同一域下的多个网站之间
-          namespace: "website-1",
-        },
+
+
+      </head>
+      <body>
+        <div id="app"></div>
         
-        // 底部导航
-        pagination: {
-          previousText: "上一页",
-          nextText: "下一页",
-          crossChapter: true,
-          crossChapterText: true,
-        },
+        <script>  
+          
+          window.$docsify = {
 
-        // 字数统计
-        count: {
-          countable: true,
-          position: "top",
-          margin: "5px",
-          float: "left",
-          fontsize: "0.9em",
-          color: "#42b983",
-          language: "chinese",
-          localization: {
-            words: "",
-            minute: "",
-          },
-          isExpected: true,
-        },
+            name: "=== xdd1997 === ",
+            logo: 'https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202211281644788.png',
+            repo: 'https://github.com/xdd1997/docsify',
 
-        editLink: {
-            text: '📝Edit this document',
-            // text: '<span style="color: limegreen;">Edit this document</span>',
-            repo: 'https://gitee.com/xdd1997/docsifyWeb/edit/master/docs/',
-            // repo: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/',
-            cssClass: 'docsify-edit-link m-0'
-                  },
+            // for docsify-dark-mode
+            // themeColor: "#42b983",
+            // 侧边栏文档目录
+            loadSidebar: true,
+            // 顶部导航栏
+            loadNavbar: true,
 
-        timeUpdater: {
-              text: "<div align='left' width='200px' style='color:green;font-size:16px'>Posted @ xdd1997 at  {docsify-updated}</div>",
-              formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
-              whereToPlace: "bottom"  // "top" or "bottom", default to "bottom"
+            // // 页脚
+            // loadFooter: true,  
+            // loadFooter: '_footer.md',
 
+            // 左边文档展示层级
+            subMaxLevel: 0,
+            // 跳转后自动到顶部
+            auto2top: true,
+
+            notFoundPage: 'error.md',
+
+
+            
+            //coverpage: true,
+            // PLUGINS
+            // ----------------------------------------------------------------
+            // 页面右侧toc
+            toc: {
+              tocMaxLevel: 3,
+              target: "h2, h3",
+            },
+
+            // 全文搜索
+            search: {
+              depth: 6,
+              noData: "没有搜到!",
+              placeholder: "搜索...",
+              // 避免搜索索引冲突,同一域下的多个网站之间
+              namespace: "website-1",
+            },
+            
+            // 底部导航
+            pagination: {
+              previousText: "上一页",
+              nextText: "下一页",
+              crossChapter: true,
+              crossChapterText: true,
+            },
+
+            
+            // 字数统计
+            count: {
+              countable: true,
+              position: "top",
+              margin: "5px",
+              float: "left",
+              fontsize: "0.9em",
+              color: "#42b983",
+              language: "chinese",
+              localization: {
+                words: "",
+                minute: "",
+              },
+              isExpected: true,
+            },
+
+            editLink: {
+                text: '📝Edit this document',
+                // text: '<span style="color: limegreen;">Edit this document</span>',
+                repo: 'https://gitee.com/xdd1997/docsifyWeb/edit/master/docs/',
+                // repo: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/',
+                cssClass: 'docsify-edit-link m-0'
                       },
 
-        // darkMode: {
-        //       dark: {
-        //         background: "#1c2022",
-        //         toggleBtnBg: "#34495e",
-        //         textColor: "#b4b4b4"
-        //               },
-        //       light: {
-        //         background: "white",
-        //         toggleBtnBg: "var(--theme-color)",
-        //         textColor: "var(--theme-color)"
-        //               }
-        //           },
+            timeUpdater: {
+                  text: "<div align='left' width='200px' style='color:green;font-size:16px'>Posted @ xdd1997 at  {docsify-updated}</div>",
+                  formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+                  whereToPlace: "bottom"  // "top" or "bottom", default to "bottom"
+
+                          },
+
+            // darkMode: {
+            //       dark: {
+            //         background: "#1c2022",
+            //         toggleBtnBg: "#34495e",
+            //         textColor: "#b4b4b4"
+            //               },
+            //       light: {
+            //         background: "white",
+            //         toggleBtnBg: "var(--theme-color)",
+            //         textColor: "var(--theme-color)"
+            //               }
+            //           },
 
 
 
-        // 添加页脚，邮箱与赞赏
-        footer: {
-          copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
-          auth: '<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/20221128160840.png"/></a>',
-          // pre: '<hr/>',
-          style: 'text-align: center;',
-        },
+            // 添加页脚，邮箱与赞赏
+            footer: {
+              copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
+              auth: '<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green"/></a>',
+              // pre: '<hr/>',
+              style: 'text-align: center;',
+            },
 
 
-        // // 来必力评论
-        // plugins: [
-        // function (hook, vm) {
-        //   // load livere
-        //   hook.beforeEach(function(content) {
-        //     var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81NzY5Ny8zNDE2MA=='></div>\n\n----\n"
-        //     return content + comment;
-        //   });
+            // // 来必力评论,有广告
+            // plugins: [
+            // function (hook, vm) {
+            //   // load livere
+            //   hook.beforeEach(function(content) {
+            //     var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81MDc3MS8yNzI1Mw=='></div>\n\n----\n"
+            //     return content + comment;
+            //   });
 
-        //   hook.doneEach(function() {
-        //     (function(d, s) {
-        //       var j, e = d.getElementsByTagName(s)[0];
-        //       if (typeof LivereTower === 'function') { return; }
-        //       j = d.createElement(s);
-        //       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        //       j.async = true;
-        //       e.parentNode.insertBefore(j, e);
-        //                 })(document, 'script');
-        //               });
-        //             },
-        //           ]
-
-
-
+            //   hook.doneEach(function() {
+            //     (function(d, s) {
+            //       var j, e = d.getElementsByTagName(s)[0];
+            //       if (typeof LivereTower === 'function') { return; }
+            //       j = d.createElement(s);
+            //       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            //       j.async = true;
+            //       e.parentNode.insertBefore(j, e);
+            //                 })(document, 'script');
+            //               });
+            //             },
+            //           ]
 
 
 
 
-      };
-    </script>
-
-    <!-- docsify-dark-mode -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script> -->
-    
-    <!-- 添加页脚 -->
-    <!-- <script src="https://notebook.js.org/plugin/docsify-footer-enh.min.js"></script> -->
-    <script src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/botton.js"></script>
-    
-
-    <!-- docsify -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>  
-
-    <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-
-    <!-- 多tab支持 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
-
-    <!-- 代码复制 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
-
-    <!-- 底部 上一页下一页 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
-
-    <!-- 全文搜索 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-
-    <!-- 图片放大缩小 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-
-    <!-- 字数统计 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
-
-    <!-- 侧边栏目录折叠 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
-    <!-- 文档更新日期 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
-
-    <!-- 页面右侧 TOC -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
-
-    <!-- emoji -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-
-    <!-- edit-on-github -->
-    <script src="https://unpkg.com/docsify-edit-link@1.0.1/index.js"></script>
-
-    <!-- 回到顶部 -->
-    <script src="https://notebook.js.org/plugin/jquery.js"></script>
-    <script src="https://notebook.js.org/plugin/jquery.goup.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $.goup({
-          trigger: 100,
-          bottomOffset: 52,
-          locationOffset: 25,
-          // title: 'TOP',
-          titleAsText: true
-        });
-      });
-    </script>
-
-    <!-- 鼠标点击出现爱心 -->
-    <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 
 
-    
-    <!-- 看板娘 -->
-<!--     <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-    <script>
-      L2Dwidget.init({
-        "model": {
-          //jsonpath控制显示那个小萝莉模型，
-          //(切换模型需要改动)
-          jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
-          "scale": 1
-        },
-        "display": {
-          "position": "right", //看板娘的表现位置
-          "width": 70,  //小萝莉的宽度
-          "height": 140, //小萝莉的高度
-          "hOffset": 35,
-          "vOffset": -20
-        },
-        "mobile": {
-          "show": true,
-          "scale": 0.5
-        },
-        "react": {
-          "opacityDefault": 0.7,
-          "opacityOnHover": 0.2
-        }
-      });
-    </script> -->
 
-    <!-- 看板娘2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
+          };
+        </script>
 
+        <!-- docsify-dark-mode -->
+        <!-- <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script> -->
+        
+        <!-- 添加页脚 -->
+        <!-- <script src="https://notebook.js.org/plugin/docsify-footer-enh.min.js"></script> -->
+        <script src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/botton.js"></script>
+        
 
-    <!-- Gitalk 评论系统 -->
-<!--     <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
-    <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
-    <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
-    <script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
-    <script>
-      // title_id需要初始化
-      window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
-      const gitalk = new Gitalk({
-        clientID: '06261ec18e4260f1a013',
-        clientSecret: '80614f70099af49c2c790c77b6a66468017b0d51',
-        repo: 'docsify',
-        owner: 'xdd1997',
-        admin: ['xdd1997'],
-        title: decodeURI(window.title_id),
-        distractionFreeMode: false, // 是否添加全屏遮罩
-        id: md5(window.location.hash),  // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
-        enableHotKey: true, // 提交评论快捷键(cmd/ctrl + enter)
-      })
-      // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
-      window.onhashchange = function (event) {
-        if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
-          location.reload()
-        }
-      }
-    </script> -->
+        <!-- docsify -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script> 
+
+        <!-- 页脚 _footer.md -->
+        <!--     <script src="//vox.cab/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>  -->
+
+        <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+
+        <!-- 多tab支持 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
+
+        <!-- 代码复制 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+
+        <!-- 底部 上一页下一页 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
+
+        <!-- 全文搜索 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+
+        <!-- 图片放大缩小 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+
+        <!-- 字数统计 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+
+        <!-- 侧边栏目录折叠 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+        <!-- 文档更新日期 -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+
+        <!-- 页面右侧 TOC -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
 
 
-    <!-- gitalk 评论 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    
-    <script>
-      let client_id = '06261ec18e4260f1a013';
-      let client_secret = '80614f70099af49c2c790c77b6a66468017b0d51';
 
-      let props = {
-        clientID: client_id,
-        clientSecret: client_secret,
-        repo: 'docsify',
-        owner: 'xdd1997',
-        admin: ['xdd1997'],
-        distractionFreeMode: false,
-        id: decodeURI(location.hash.split('?')[0]),
-        language: 'en',
-      };
-      let gitalk = new Gitalk(props);
-      // 哈希路由切换时 重新加载Gitalk
-      window.addEventListener('hashchange', onHashChange);
-      function onHashChange() {
-        props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
-      }
-    </script>
+        <!-- emoji -->
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+        <!-- edit-on-github -->
+        <script src="https://unpkg.com/docsify-edit-link@1.0.1/index.js"></script>
+
+        <!-- 回到顶部 -->
+        <script src="https://notebook.js.org/plugin/jquery.js"></script>
+        <script src="https://notebook.js.org/plugin/jquery.goup.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $.goup({
+              trigger: 100,
+              bottomOffset: 52,
+              locationOffset: 25,
+              // title: 'TOP',
+              titleAsText: true
+            });
+          });
+        </script>
+
+        <!-- 鼠标点击出现爱心 -->
+        <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 
 
-  </body>
+        
+        <!-- 看板娘 -->
+    <!--     <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+        <script>
+          L2Dwidget.init({
+            "model": {
+              //jsonpath控制显示那个小萝莉模型，
+              //(切换模型需要改动)
+              jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+              "scale": 1
+            },
+            "display": {
+              "position": "right", //看板娘的表现位置
+              "width": 70,  //小萝莉的宽度
+              "height": 140, //小萝莉的高度
+              "hOffset": 35,
+              "vOffset": -20
+            },
+            "mobile": {
+              "show": true,
+              "scale": 0.5
+            },
+            "react": {
+              "opacityDefault": 0.7,
+              "opacityOnHover": 0.2
+            }
+          });
+        </script> -->
+
+        <!-- 看板娘2 -->
+        <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
+
+
+        <!-- Gitalk 评论系统 -->
+    <!--     <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
+        <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
+        <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
+        <script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
+        <script>
+          // title_id需要初始化
+          window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+          const gitalk = new Gitalk({
+            clientID: '06261ec18e4260f1a013',
+            clientSecret: '80614f70099af49c2c790c77b6a66468017b0d51',
+            repo: 'docsify',
+            owner: 'xdd1997',
+            admin: ['xdd1997'],
+            title: decodeURI(window.title_id),
+            distractionFreeMode: false, // 是否添加全屏遮罩
+            id: md5(window.location.hash),  // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+            enableHotKey: true, // 提交评论快捷键(cmd/ctrl + enter)
+          })
+          // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+          window.onhashchange = function (event) {
+            if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+              location.reload()
+            }
+          }
+        </script> -->
+
+
+        <!-- gitalk 评论 -->
+        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    <!--     <script>
+          let client_id = '06261ec18e4260f1a013';
+          let client_secret = '80614f70099af49c2c790c77b6a66468017b0d51';
+
+          let props = {
+            clientID: client_id,
+            clientSecret: client_secret,
+            repo: 'docsify',
+            owner: 'xdd1997',
+            admin: ['xdd1997'],
+            distractionFreeMode: false,
+            id: decodeURI(location.hash.split('?')[0]),
+            language: 'en',
+          };
+          let gitalk = new Gitalk(props);
+          // 哈希路由切换时 重新加载Gitalk
+          window.addEventListener('hashchange', onHashChange);
+          function onHashChange() {
+            props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
+          }
+        </script> -->
+
+
+
+          <!-- giscus 评论 -->
+    <!--     <script src="https://giscus.app/client.js"
+            data-repo="xdd1997/docsify"
+            data-repo-id="R_kgDOIg7OMQ"
+            data-category="General"
+            data-category-id="DIC_kwDOIg7OMc4CSz3W"
+            data-mapping="title"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="light"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+        </script> -->
+
+
+
+
+
+      </body>
 </html>
