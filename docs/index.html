@@ -84,13 +84,11 @@
             // 跳转后自动到顶部
             auto2top: true,
 
+            // 404
             notFoundPage: 'error.md',
 
 
-            
-            //coverpage: true,
-            // PLUGINS
-            // ----------------------------------------------------------------
+
             // 页面右侧toc
             toc: {
               tocMaxLevel: 3,
@@ -146,97 +144,17 @@
                   whereToPlace: "bottom"  // "top" or "bottom", default to "bottom"
 
                           },
-            ga: 'G-9EFRGQK2N0',
-
-            // darkMode: {
-            //       dark: {
-            //         background: "#1c2022",
-            //         toggleBtnBg: "#34495e",
-            //         textColor: "#b4b4b4"
-            //               },
-            //       light: {
-            //         background: "white",
-            //         toggleBtnBg: "var(--theme-color)",
-            //         textColor: "var(--theme-color)"
-            //               }
-            //           },
 
 
 
             // 添加页脚，邮箱与赞赏
-            // footer: {
-            //   copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
-            //   auth: '<p>如果您有建站建议或对文章有什么意见，请在<a href="https://github.com/xdd1997/docsify/issues" target="_blank" rel="noopener noreferrer">issue</a>提交，紧急情况可邮箱联系 <br><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green"/></a></p>',
-            //   pre: '<hr/>',
-            //   style: 'text-align: center;',
-            // },
+            footer: {
+              copy: '<div class = "over" ><iframe  src="https://xdd1997.gitee.io/sponsor-page/" style="overflow-x:hidden;overflow-y:hidden; min-height:200px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime">',
+              auth: '<p>如果您有建站建议或对文章有什么意见，请在<a href="https://github.com/xdd1997/docsify/issues" target="_blank" rel="noopener noreferrer">issue</a>提交，紧急情况可邮箱联系 <br><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" style="text-decoration:none;"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green"/></a></p>',
+              pre: '<hr/>',
+              style: 'text-align: center;',
+            },
 
-
-            // // 来必力评论,有广告
-            // plugins: [
-            // function (hook, vm) {
-            //   // load livere
-            //   hook.beforeEach(function(content) {
-            //     var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC81MDc3MS8yNzI1Mw=='></div>\n\n----\n"
-            //     return content + '\n' + comment;
-            //   });
-
-            //   hook.doneEach(function() {
-            //     (function(d, s) {
-            //       var j, e = d.getElementsByTagName(s)[0];
-            //       if (typeof LivereTower === 'function') { return; }
-            //       j = d.createElement(s);
-            //       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            //       j.async = true;
-            //       e.parentNode.insertBefore(j, e);
-            //                 })(document, 'script');
-            //               });
-            //             },
-            //           ]
-
-
-            plugins: [
-
-        function(hook, vm) {
-          hook.beforeEach(function (md) {
-            const regex = new RegExp("\"images/", 'ig');
-            md = md.replace(regex, "\"docs/images/");
-            return md;
-          });
-          hook.doneEach(function() {
-
-            const path = vm.route.path === '/' ? '/README' : vm.route.path;
-            console.log("************************02")
-            console.log(path)
-
-            
-            const path_split = path.split('/');
-            const last_item = path_split[path_split.length - 1];
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.setAttribute('src', 'https://giscus.app/client.js');
-            dsq.setAttribute('data-repo', 'xdd1997/docsify');
-            dsq.setAttribute('data-repo-id', 'R_kgDOIg7OMQ');
-            dsq.setAttribute('data-category', 'General');
-            dsq.setAttribute('data-category-id', 'DDIC_kwDOIg7OMc4CSz3W');
-            dsq.setAttribute('data-mapping', 'title');
-            dsq.setAttribute('data-term', last_item);
-            dsq.setAttribute('data-reactions-enabled', '1');
-            dsq.setAttribute('data-emit-metadata', '0');
-            dsq.setAttribute('data-theme', 'light');
-            dsq.setAttribute('data-lang', 'zh-CN');
-            dsq.setAttribute('crossorigin', 'anonymous');
-
-            console.log("************************066")
-            console.log(dsq)
-
-            document.getElementById('main').appendChild(dsq);
-            console.log("************************088")
-            console.log(document)
-          });
-        },
-      ],
 
 
 
@@ -244,25 +162,22 @@
           };
         </script>
 
-        <!-- docsify-dark-mode -->
-        <!-- <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script> -->
-        
+       
+        <!-- 添加评论可参考  https://ruanqizhen.github.io/test 未调试成功 -->
+
+
+
+
         <!-- 添加页脚 -->
         <!-- <script src="https://notebook.js.org/plugin/docsify-footer-enh.min.js"></script> -->
-<!--         <script src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/botton.js"></script> -->
+        <script src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/botton.js"></script>
         
 
         <!-- docsify -->
-       
         <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script> 
-        <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
 
 
-        <!-- 页脚 _footer.md -->
-        <!--     <script src="//vox.cab/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>  -->
-
-        <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+        <!-- 代码高亮 -->
         <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
 
         <!-- 多tab支持 -->
