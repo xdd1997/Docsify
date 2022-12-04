@@ -1,4 +1,5 @@
->  非常感谢项目[ruanqizhen/test ](https://github.com/ruanqizhen/test)
+>  非常感谢项目[ruanqizhen/test ](https://github.com/ruanqizhen/test) and [ruanqizhen/
+labview_book](https://lv.qizhen.xyz/)
 
 # docsify  + giscus 
 
