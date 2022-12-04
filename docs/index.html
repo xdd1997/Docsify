@@ -158,6 +158,47 @@
 
 
 
+            plugins: [
+                    function(hook, vm) {
+                        hook.beforeEach(function (md) {
+                          const regex = new RegExp("\"images/", 'ig');
+                          md = md.replace(regex, "\"docs/images/");
+                          return md;
+                        });
+                        hook.doneEach(function() {
+                          var cnzz = document.createElement('script');
+                          cnzz.type = 'text/javascript';
+                          cnzz.setAttribute('src', 'https://s4.cnzz.com/z_stat.php?id=1280609189&web_id=1280609189');
+                          cnzz.async = true;
+                          document.getElementById('main').appendChild(cnzz);
+                    
+                          const path = vm.route.path === '/' ? '/README' : vm.route.path;
+                          const path_split = path.split('/');
+                          const last_item = path_split[path_split.length - 1];
+                          var dsq = document.createElement('script');
+                          dsq.type = 'text/javascript';
+                          dsq.async = true;
+                          dsq.setAttribute('src', 'https://giscus.app/client.js');
+                          dsq.setAttribute('data-repo', 'xdd1997/docsify');
+                          dsq.setAttribute('data-repo-id', 'R_kgDOIg7OMQ');
+                          dsq.setAttribute('data-category', 'Announcements');
+                          dsq.setAttribute('data-category-id', 'DIC_kwDOIg7OMc4CSz3W');
+                          dsq.setAttribute('data-mapping', 'specific');
+                          dsq.setAttribute('data-term', last_item);
+                          dsq.setAttribute('data-reactions-enabled', '1');
+                          dsq.setAttribute('data-emit-metadata', '0');
+                          dsq.setAttribute('data-theme', 'light');
+                          dsq.setAttribute('data-lang', 'zh-CN');
+                          dsq.setAttribute('crossorigin', 'anonymous');
+                          document.getElementById('main').appendChild(dsq);
+                        });
+                      },
+                    ],
+
+
+
+
+
 
 
           };
@@ -240,7 +281,7 @@
 
 
         <!-- Gitalk 评论系统 -->
-        <!-- <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
+        <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
         <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
         <script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
         <script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
@@ -253,7 +294,7 @@
             repo: 'docsify',
             owner: 'xdd1997',
             admin: ['xdd1997'],
-            proxy = "https://docsify-github.netlify.app",
+            // proxy = "https://docsify-github.netlify.app/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",
             title: decodeURI(window.title_id),
             distractionFreeMode: false, // 是否添加全屏遮罩
             id: md5(window.location.hash),  // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
@@ -265,7 +306,12 @@
               location.reload()
             }
           }
-        </script> -->
+        </script>
+
+
+
+        <!-- Giscus 评论系统 -->
+
 
 
 
