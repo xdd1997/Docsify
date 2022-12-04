@@ -4,7 +4,7 @@
 
 ## 开启 Discussions
 
-打开gitgub上的相关项目---Setttings---向下滑---勾选Discussions---回到项目界面
+打开github上的相关项目---Setttings---向下滑---勾选Discussions---回到项目界面
 
 ![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202212041627622.png)
 
