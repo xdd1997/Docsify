@@ -166,12 +166,6 @@
                           return md;
                         });
                         hook.doneEach(function() {
-                          var cnzz = document.createElement('script');
-                          cnzz.type = 'text/javascript';
-                          cnzz.setAttribute('src', 'https://s4.cnzz.com/z_stat.php?id=1280609189&web_id=1280609189');
-                          cnzz.async = true;
-                          document.getElementById('main').appendChild(cnzz);
-                    
                           const path = vm.route.path === '/' ? '/README' : vm.route.path;
                           const path_split = path.split('/');
                           const last_item = path_split[path_split.length - 1];
