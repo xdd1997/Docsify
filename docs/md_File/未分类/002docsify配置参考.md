@@ -1,3 +1,12 @@
+<span id="busuanzi_container_site_pv" style='display:none'>
+    👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    | 🚴‍♂️ 本站总访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
 [https://huaji8.top/post/live2d-plugin-2.0/](https://huaji8.top/post/live2d-plugin-2.0/)
 
 [(24条消息) docsify 构建文档网站之定制功能（全网最全）_WuGenQiang的博客-CSDN博客](https://blog.csdn.net/wugenqiang/article/details/107071378)
