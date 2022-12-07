@@ -9,3 +9,5 @@
 [(24条消息) 有了docsify神器，从此爱上看文档_星河_赵梓宇的博客-CSDN博客](https://blog.csdn.net/Aria_Miazzy/article/details/103536652)
 
 [docsify的配置+全插件列表 - 邓邓的流水账](https://xhhdd.cc/index.php/archives/80/)
+
+[https://docsify.js.org/#/zh-cn/awesome](https://docsify.js.org/#/zh-cn/awesome)
