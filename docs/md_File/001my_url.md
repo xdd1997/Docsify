@@ -1,10 +1,6 @@
 
 
-[Gitee.io](http://xdd1997.gitee.io)
-
-[Github.io](https://xdd1997.github.io)
-
-[docsify.io](https://xdd1997.github.io/docsify)
+[Gitee.io](http://xdd1997.gitee.io)      [Github.io](https://xdd1997.github.io)     [gitee.io/docsify](https://xdd1997.gitee.io/docsify)
 
 
 
