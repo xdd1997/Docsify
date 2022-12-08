@@ -8,27 +8,28 @@
 
 
 
-
-
-| 导航                                               |                                      |                                        |
-| -------------------------------------------------- | ------------------------------------ | -------------------------------------- |
-| [轩辕导航](https://xydh.fun/xdd1997)               | [Gitee.io](http://xdd1997.gitee.io/) | [Github.io](https://xdd1997.github.io) |
-| [io.docsify](https://xdd1997.github.io/docsify/#/) |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-| 视频                                               |                                      |                                        |
-| [莫扎兔](https://mozhatu.com/)                     | [钉子电影](http://www.xiangyue.tv/)  | [追剧达人](http://vipmv.tv/)           |
-| [大师兄影视](https://dsxys.com)                    | [天空影视](https://www.tkys.tv)      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-| 音乐                                               |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-|                                                    |                                      |                                        |
-| 图片                                               |                                      |                                        |
-|    001                                             |                                      |                                        |
-|                                                    |                                      |                                        |
+| 导航                                                |                                                      |                                               |
+| --------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------- |
+| [轩辕导航](https://xydh.fun/xdd1997)                | [Gitee.io](http://xdd1997.gitee.io/)                 | [Github.io](https://xdd1997.github.io)        |
+| [io.docsify](https://xdd1997.github.io/docsify/#/)  |                                                      |                                               |
+|                                                     |                                                      |                                               |
+|                                                     |                                                      |                                               |
+|                                                     |                                                      |                                               |
+| 视频                                                |                                                      |                                               |
+| [莫扎兔](https://mozhatu.com/)                      | [钉子电影](http://www.xiangyue.tv/)                  | [追剧达人](http://vipmv.tv/)                  |
+| [大师兄影视](https://dsxys.com)                     | [天空影视](https://www.tkys.tv)                      | [低端影视](https://ddys2.me/)                 |
+| [努努影院](https://www.nunuyy3.org/)                |                                                      |                                               |
+|                                                     |                                                      |                                               |
+| 网盘资源                                            |                                                      |                                               |
+| [阿里云盘-官网](https://www.aliyundrive.com/drive/) | [夸克网盘-官网](https://pan.quark.cn/list#/list/all) | [TG搜索](https://meow.tg/)                    |
+| [易搜-阿里云盘](https://yiso.fun/)                  | [奈斯搜索-阿里云盘](https://www.niceso.fun/)         | [阿里盘搜](https://www.alipansou.com/)        |
+| [KK小站-夸克网盘](https://kkxz.vip/)                | [share-夸克网盘](https://share.shuoaini.xyz/)        | [在花盘-阿里云盘](https://www.zaihuapan.com/) |
+| [阿里云盘社区](https://yunpan1.24kdh.cn/)           |                                                      |                                               |
+|                                                     |                                                      |                                               |
+| 音乐                                                |                                                      |                                               |
+|                                                     |                                                      |                                               |
+|                                                     |                                                      |                                               |
+|                                                     |                                                      |                                               |
+| 图片                                                |                                                      |                                               |
+|                                                     |                                                      |                                               |
+|                                                     |                                                      |                                               |
