@@ -1,6 +1,5 @@
 
->  非常感谢项目[ruanqizhen/test ](https://github.com/ruanqizhen/test) and [ labview_book](https://lv.qizhen.xyz/)
-
+>  非常感谢项目[ruanqizhen/test ](https://github.com/ruanqizhen/test) and [mzlogin:giscus不显示在评论区](https://github.com/mzlogin/blog-comments/discussions/204)
 # docsify  + giscus 
 
 ## 开启 Discussions
@@ -70,7 +69,7 @@ plugins: [
             dsq.setAttribute('src', 'https://giscus.app/client.js');
             dsq.setAttribute('data-repo', 'xdd1997/docsify');
             dsq.setAttribute('data-repo-id', 'R_kgDOIg7OMQ');
-            dsq.setAttribute('data-category', 'Announcements');
+            dsq.setAttribute('data-category', 'General');
             dsq.setAttribute('data-category-id', 'DIC_kwDOIg7OMc4CSz3W');
             dsq.setAttribute('data-mapping', 'specific');
             dsq.setAttribute('data-term', last_item);
