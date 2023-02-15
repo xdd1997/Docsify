@@ -22,9 +22,10 @@ window.localStorage.removeItem(Object.keys(window.localStorage).find(i=>i.starts
 > 第三次又选Indonesia, 一切正常，接码界面不用刷新即可接受短信
 > 接到短信后，金额才会扣除
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671020389443-de2313e9-41c0-446f-9c1d-c4a4c0d25891.png)
+![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202302151054750.png)
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671019295279-8bd8f841-0e54-405b-8a0c-8e513ce80511.png)
+![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202302151055918.png)
+
 <a name="Hsj5C"></a>
 ### Signup is currently unavailable, please try again later
 163邮箱已被封禁，试试qq或者outlook邮箱
