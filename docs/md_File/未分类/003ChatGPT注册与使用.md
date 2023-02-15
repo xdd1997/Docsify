@@ -1,9 +1,12 @@
 <a name="aiuyI"></a>
 ## 注册中遇到的问题
 > 文字教程：[https://www.cnblogs.com/chat-gpt/p/how-to-use-chatgpt-in-china.html](https://www.cnblogs.com/chat-gpt/p/how-to-use-chatgpt-in-china.html)
+> 
 > 视频教程：[https://www.bilibili.com/video/BV1xK41167Jt](https://www.bilibili.com/video/BV1xK41167Jt)
+> 
 > 注册页面：[https://chat.openai.com/auth/login](https://chat.openai.com/auth/login)
-> WinDDXray下载：[https://wwDDw.qv2ray.com/](https://wwDDw.qv2ray.com/)
+> 
+> WinDDXray下载：[https://www.qv2ray.com/](https://www.qv2ray.com/)
 
 <a name="q2FgX"></a>
 ### not available in your country
@@ -19,7 +22,9 @@ window.localStorage.removeItem(Object.keys(window.localStorage).find(i=>i.starts
 > 第三次又选Indonesia, 一切正常，接码界面不用刷新即可接受短信
 > 接到短信后，金额才会扣除
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671020389443-de2313e9-41c0-446f-9c1d-c4a4c0d25891.png#averageHue=%232b5376&clientId=uf1a36f20-696c-4&from=paste&height=83&id=u37e90637&name=image.png&originHeight=124&originWidth=471&originalType=binary&ratio=1&rotation=0&showTitle=false&size=12437&status=done&style=none&taskId=uba00b138-1b62-4514-a866-7d030111ad0&title=&width=314)![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671019295279-8bd8f841-0e54-405b-8a0c-8e513ce80511.png#averageHue=%23fdfcfc&clientId=uf1a36f20-696c-4&from=paste&height=99&id=uccb5cb19&name=image.png&originHeight=191&originWidth=1024&originalType=url&ratio=1&rotation=0&showTitle=false&size=70966&status=done&style=none&taskId=u695aa3ea-0d15-4291-8ae9-a125c5cc712&title=&width=533)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671020389443-de2313e9-41c0-446f-9c1d-c4a4c0d25891.png)
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/1488614/1671019295279-8bd8f841-0e54-405b-8a0c-8e513ce80511.png)
 <a name="Hsj5C"></a>
 ### Signup is currently unavailable, please try again later
 163邮箱已被封禁，试试qq或者outlook邮箱
