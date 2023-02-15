@@ -22,7 +22,7 @@ window.localStorage.removeItem(Object.keys(window.localStorage).find(i=>i.starts
 > 第三次又选Indonesia, 一切正常，接码界面不用刷新即可接受短信
 > 接到短信后，金额才会扣除
 
-![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202302151054750.png)
+![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202302151300215.png)
 
 ![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202302151055918.png)
 
