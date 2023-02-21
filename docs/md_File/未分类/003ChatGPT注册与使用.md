@@ -6,7 +6,7 @@
 > 
 > 注册页面：[https://chat.openai.com/auth/login](https://chat.openai.com/auth/login)
 > 
-> WinDDXray下载：[https://www.qv2ray.com/](https://www.qv2ray.com/)
+> WinXray下载：[https://www.qv2ray.com/](https://www.qv2ray.com/)
 
 <a name="q2FgX"></a>
 ### not available in your country
