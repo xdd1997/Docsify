@@ -156,19 +156,15 @@
                           return md;
                         });
                         hook.doneEach(function() {
-                          const path = vm.route.path === '/' ? '/README' : vm.route.path;
-                          const path_split = path.split('/');
-                          const last_item = path_split[path_split.length - 1];
                           var dsq = document.createElement('script');
                           dsq.type = 'text/javascript';
                           dsq.async = true;
                           dsq.setAttribute('src', 'https://giscus.app/client.js');
                           dsq.setAttribute('data-repo', 'xdd1997/docsify');
                           dsq.setAttribute('data-repo-id', 'R_kgDOIg7OMQ');
-                          dsq.setAttribute('data-category', 'Announcements');
-                          dsq.setAttribute('data-category-id', 'DIC_kwDOIg7OMc4CSz3V');
+                          dsq.setAttribute('data-category', 'General');
+                          dsq.setAttribute('data-category-id', 'DIC_kwDOIg7OMc4CSz3W');
                           dsq.setAttribute('data-mapping', 'title');
-                          dsq.setAttribute('data-term', last_item);
                           dsq.setAttribute('data-reactions-enabled', '1');
                           dsq.setAttribute('data-emit-metadata', '0');
                           dsq.setAttribute('data-theme', 'light');
