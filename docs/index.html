@@ -20,9 +20,12 @@
         <!-- PC端打开 live2d -->
         <script type="text/javascript">
               var sUserAgent = navigator.userAgent.toLowerCase();
-              if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
-                  console.log("mobile");         
-              } else {
+              if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent))
+              {
+                  console.log("mobile")       
+              }
+              else
+              {
                   //pc端
                   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
                   <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.css"/>
@@ -156,9 +159,6 @@
                           return md;
                         });
                         hook.doneEach(function() {
-                          const path = vm.route.path === '/' ? '/README' : vm.route.path;
-                          const path_split = path.split('/');
-                          const last_item = path_split[path_split.length - 1];
                           var dsq = document.createElement('script');
                           dsq.type = 'text/javascript';
                           dsq.async = true;
@@ -167,8 +167,7 @@
                           dsq.setAttribute('data-repo-id', 'R_kgDOIg7OMQ');
                           dsq.setAttribute('data-category', 'General');
                           dsq.setAttribute('data-category-id', 'DIC_kwDOIg7OMc4CSz3W');
-                          dsq.setAttribute('data-mapping', 'specific');
-                          dsq.setAttribute('data-term', last_item);
+                          dsq.setAttribute('data-mapping', 'title');
                           dsq.setAttribute('data-reactions-enabled', '1');
                           dsq.setAttribute('data-emit-metadata', '0');
                           dsq.setAttribute('data-theme', 'light');
