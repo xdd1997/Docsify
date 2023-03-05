@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)8s:%(message)s')
 logging.info('*' * 80)
 
 def remove_digits_front_of_string(strOld:str) -> str:
+    """ 去除文件最前面连续数字：日期"""
     strNew = strOld
     for c in strNew:
         if c.isdigit():
