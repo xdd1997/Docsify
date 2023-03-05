@@ -110,8 +110,8 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     str01 = '<a href=http://wpa.qq.com/msgrd?v=1&uin=1837990190&site=qq&menu=yes" target="_blank"><img src="https://img.shields.io/badge/QQ-1837990190-brightgreen"></a></p>'
 
     str02 = '<span id="busuanzi_container_site_pv" style="display:none">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>'
-    str03 = '\n[侧边栏](_sidebar.md)'
-    str04 = '\n[我的网页](md_File/20221212-my_url.md)\n'
+    str03 = '\n\n[侧边栏](_sidebar.md)'
+    str04 = '\n[我的网页](md_File/20221212-my_url.md)\n\n'
 
     content = []
     content.append(str00)
