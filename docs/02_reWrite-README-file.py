@@ -106,8 +106,19 @@ def cut_pic(folder, radio):
 
 
 def write_readme_file(file_list_new, num_row_pic, width_show):
-    with open('README.md', encoding='utf-8') as f:
-        content = f.readlines()
+    str00 = '<p align="center">  <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" target="_blank"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green.svg"></a>'
+    str01 = '<a href=http://wpa.qq.com/msgrd?v=1&uin=1837990190&site=qq&menu=yes" target="_blank"><img src="https://img.shields.io/badge/QQ-1837990190-brightgreen"></a></p>'
+
+    str02 = '<span id="busuanzi_container_site_pv" style="display:none">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>'
+    str03 = '\n[侧边栏](_sidebar.md)'
+    str04 = '\n[我的网页](md_File/20221212-my_url.md)\n'
+
+    content = []
+    content.append(str00)
+    content.append(str01)
+    content.append(str02)
+    content.append(str03)
+    content.append(str04)
 
     N_file = len(file_list_new)
     content.append("|     " * num_row_pic + "|\n")
@@ -120,7 +131,6 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     for ii in range(N_file):
         if ii % num_row_pic == 0 and ii != 0:  # 换行，每行固定文章数目
             content.append(row_pic + "|\n")
-            # content.append("| " * num_row_pic + "|\n")
             row_pic = ''
             content.append(row_md + "|\n")
             row_md = ''
@@ -142,7 +152,7 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
         row_md = row_md + f'| [{basename}]({path})'
 
 
-
+    # 补足表格最后一行
     yuShu = N_file % num_row_pic
     content.append(row_pic + "| " * (num_row_pic-yuShu) + "|\n")
     content.append(row_md + "| " * (num_row_pic - yuShu) + "|\n")
@@ -150,7 +160,7 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
 
 
     # 写出到新的markdown文件中
-    with open('README2.md', 'w', encoding='utf-8') as fw:
+    with open('README.md', 'w', encoding='utf-8') as fw:
         fw.writelines(content)
 
 
