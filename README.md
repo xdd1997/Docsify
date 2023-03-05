@@ -1,6 +1,6 @@
 ## 使用说明
 
-1. 放置好md文件后，运行 `01_gen_sidebar.bat`，即可自动生出侧边栏文件 `_sidebar.md`
+1. 放置好md文件并修改名称后，运行 `doubleClick_me.bat`，即可自动生出侧边栏文件 `_navbar.md/README.md`
 2. git上传即可 
 3. github仓库: https://github.com/xdd1997/docsify
 4. gitee仓库: https://gitee.com/xdd1997/docsify
@@ -11,13 +11,13 @@
 
 ## 注意事项
 
-1. 文件(文件夹）名称应当以三个数字开头（建议），以便作为网页中文章的排序方式，否则将以os.listdir()排序方式展示文章
-2. 自动构建侧边栏的脚本`01_gen_sidebar.bat`仅支持三层文件目录
+1. 文件名称必须以8个数字(YYYYMMDD)开头，并作为网页中文章时间排序方式的依据
+2. 自动构建`_navbar.md`的脚本仅支持`md_File/xx/yy`三层文件目录
 
 
 
 ## 本地预览
-![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/20221128104300.png)
+![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202303051916010.png)
 
 
 

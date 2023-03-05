@@ -110,7 +110,7 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     str01 = '<a href=http://wpa.qq.com/msgrd?v=1&uin=1837990190&site=qq&menu=yes" target="_blank"><img src="https://img.shields.io/badge/QQ-1837990190-brightgreen"></a></p>'
 
     str02 = '<span id="busuanzi_container_site_pv" style="display:none">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>'
-    str03 = '\n\n[侧边栏](_sidebar.md)'
+    str03 = '\n\n[侧边栏](_sidebar.md)\n'
     str04 = '\n[我的网页](md_File/20221212-my_url.md)\n\n'
 
     content = []
@@ -164,9 +164,42 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
         fw.writelines(content)
 
 
+def write_sort_articles_by_date(file_list_new):
+    """ 写一个按照日期对文章分类的md文件 """
+
+    content = []
+    local_time = time.localtime(time.time())
+
+    tmp_year = str(local_time[0])
+    str_tmp = f'## {tmp_year}\n'
+    content.append(str_tmp)
+
+    for ii in file_list_new:
+        tmp = os.path.basename(ii)[0:4]
+        if tmp!= tmp_year:
+            tmp_year = tmp
+            str_tmp = f'## {tmp_year}\n'
+            content.append(str_tmp)
+        else:
+            title = os.path.basename(ii)
+
+            tmp_list = ii.split('\\')
+            index = tmp_list.index("md_File")
+            path = ''
+            for jj in range(index, len(tmp_list)):
+                path = os.path.join(path, tmp_list[jj])
+            path = path.replace('\\', '/')
+            str_tmp = f'##### [{title}]({path})\n'
+            content.append(str_tmp)
+
+    # 写出到 articles_by_date文件中
+    with open('articles_by_date.md', 'w', encoding='utf-8') as fw:
+        fw.writelines(content)
+
+
+
 if __name__ == "__main__":
     folderAbs = os.path.abspath("./md_File")
-    # print(folderAbs)
     # folderAbs = r"D:\Git\docsify\docs\md_File"
     file_list = get_files_of_folder(folderAbs)
     file_list_new = sort_file_by_date(file_list)
@@ -180,11 +213,19 @@ if __name__ == "__main__":
     else:
         print("文件夹图片数目已经超过文章数目，无需下载图片")
 
+
     # 裁剪图片
     radio = [16, 9]
     cut_pic(path, radio)
+
 
     # 写readme文件
     num_row_pic = 3
     width_show = 1000
     write_readme_file(file_list_new, num_row_pic, width_show)
+
+    # 写 articles_by_date.md
+    write_sort_articles_by_date(file_list_new)
+
+    print("=" *80 + " \nREADME.md文件与 articles_by_date.md 文件生成完毕\n")
+    

@@ -18,7 +18,14 @@ def remove_digits_front_of_string(strOld:str) -> str:
     for c in strNew:
         if c.isdigit():
             strNew = strNew[1:]
+
+    # 去除首个字符 '-'
+    if strNew[0] == '-':
+        strNew = strNew[1:]
+        
     return strNew
+
+
 
 def deal_fileName_with_space():
     """ 去除文件名中的空格 """
@@ -40,9 +47,17 @@ def deal_fileName_with_space():
 
     for ii in fileList:
         name = os.path.basename(ii)
+        rename = 0
         if ' ' in name:
-            nameNew = name.replace(' ','')
-            target = os.path.join(os.path.dirname(ii),nameNew)
+            rename = 1
+            name = name.replace(' ','')
+            
+        if name[8] != '-':
+            rename = 1
+            name = name[0:8] + '-' + name[8:]
+
+        if rename == 1:
+            target = os.path.join(os.path.dirname(ii),name)
             copyfile(ii, target)
             os.unlink(ii)
 
@@ -96,13 +111,13 @@ def gen_sidebar():
                         jjNew = remove_digits_front_of_string(jj)
                         fw.write(f'    * [{jjNew}]({tmp})' + '\n')
             else:
+                """ 为了在网页中先显示文件夹，最后显示根目录的文件
+                    在本次循环只写文件夹的内容，不写文件内容 """
                 pass
 
 
-
-        # fw.write('*' * 10 + "\n")
-
-        for ii in os.listdir(dir_path):  # 打印CAD-CAE等文件夹的同级文件
+        """ 打印CAD-CAE等文件夹的同级文件 """
+        for ii in os.listdir(dir_path):
             tt = os.path.join(dir_path,ii)
             if os.path.isfile(tt):
                 tmp = f'/md_File/{ii}'
@@ -118,5 +133,5 @@ if __name__ == "__main__":
     deal_fileName_with_space()
     gen_sidebar()
     
-    logging.info('_sidebar.md 生成完毕，请git提交')
+    logging.info('_sidebar.md 生成完毕')
 
