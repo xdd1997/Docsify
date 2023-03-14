@@ -64,7 +64,7 @@ def download_pic(path, pic_num):
     for index, url in enumerate(my_pic_list):
         url = "https://pic.netbian.com" + url
 
-        print(str(index) + ' / ' + str(len(my_pic_list)))
+        print(str(index+1) + ' / ' + str(len(my_pic_list)), end='\r')
         picName = url.split('/')[-1]
         fileSavePath = os.path.join(path, picName)
         if not os.path.exists(fileSavePath):
@@ -128,6 +128,14 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     row_pic = ''
     row_md = ''
     pic_list = os.listdir("./pic/used")
+
+    # 对图片随机排序
+    random_origin = random.sample(range(1000,10000), len(pic_list))
+    sort_index = sorted(range(len(random_origin)), key=lambda i: random_origin[i])
+    pic_list = [pic_list[i] for i in sort_index]
+    
+
+    #  写表格与内容
     for ii in range(N_file):
         if ii % num_row_pic == 0 and ii != 0:  # 换行，每行固定文章数目
             content.append(row_pic + "|\n")
@@ -207,11 +215,15 @@ if __name__ == "__main__":
     # 下载图片
     N_file = len(file_list_new)
     path = os.path.abspath('./pic/used')
-    N_exist = len((os.listdir(path)))
-    if N_exist < N_file:
-        download_pic(path, N_file - N_exist)
-    else:
-        print("文件夹图片数目已经超过文章数目，无需下载图片")
+    
+    while True:
+        N_exist = len((os.listdir(path)))
+        if N_exist < N_file:
+            print("正在下载图片")
+            download_pic(path, N_file - N_exist)
+        else:
+            print("图片数目已经多于文章数目")
+            break
 
 
     # 裁剪图片
