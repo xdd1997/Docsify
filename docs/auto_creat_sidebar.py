@@ -117,6 +117,7 @@ def gen_sidebar():
 
 
         """ 打印CAD-CAE等文件夹的同级文件 """
+        fw.write('\n\n')
         for ii in os.listdir(dir_path):
             tt = os.path.join(dir_path,ii)
             if os.path.isfile(tt):
