@@ -1,4 +1,13 @@
-## 使用说明
+## 首次配置
+1. 下载项目：https://github.com/xdd1997/docsify.git
+2. 下载Node：https://nodejs.org/zh-cn/download/current/
+3. 下载docsify组件：npm i docsify-cli -g
+4. cd进入docs文件夹：docsify serve
+5. 浏览器预览：localhost:3000
+6. 部署到网页
+
+
+## 非首次使用
 
 1. 放置好md文件并修改名称后，运行 `doubleClick_me.bat`，即可自动生出侧边栏文件 `_navbar.md/README.md`
 2. git上传即可 
@@ -11,8 +20,8 @@
 
 ## 注意事项
 
-1. 文件名称必须以8个数字(YYYYMMDD)开头，并作为网页中文章时间排序方式的依据
-2. 自动构建`_navbar.md`的脚本仅支持`md_File/xx/yy`三层文件目录
+1. 文件名称必须以8个数字(YYYYMMDD)开头，并将作为网页中文章时间排序的依据
+2. 自动构建`_navbar.md`的脚本`auto_creat_sidebar.py`仅支持`md_File/xx/yy`三层文件目录
 
 
 
