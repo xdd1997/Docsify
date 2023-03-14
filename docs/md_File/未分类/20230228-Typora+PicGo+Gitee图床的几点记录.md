@@ -17,5 +17,5 @@
 
 解决方法：配置path
 
-![image-20210910123324350](https://gitee.com/xdd1997/MyPic/raw/master/img/202109101233413.png)
+![](https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202303141529433.png)
 
