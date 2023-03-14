@@ -100,18 +100,19 @@ def cut_pic(folder, radio):
     for ii in pic_list:
         ii_path = os.path.join(folder, ii)
         img = Image.open(ii_path)
-        cropBox = calu_pic_cropBox(img.size, radio)
-        cropped = img.crop(cropBox)
-        cropped.save(ii_path)
+        if abs(img.size[0]/img.size[1] - radio[0]/radio[1])>0.001:
+            cropBox = calu_pic_cropBox(img.size, radio)
+            cropped = img.crop(cropBox)
+            cropped.save(ii_path)
 
 
 def write_readme_file(file_list_new, num_row_pic, width_show):
     str00 = '<p align="center">  <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gfnl5bOxs7fB8PCv4u7s" target="_blank"><img src="https://img.shields.io/badge/Email-xdd2026%40qq.com-green.svg"></a>'
     str01 = '<a href=http://wpa.qq.com/msgrd?v=1&uin=1837990190&site=qq&menu=yes" target="_blank"><img src="https://img.shields.io/badge/QQ-1837990190-brightgreen"></a></p>'
 
-    str02 = '<span id="busuanzi_container_site_pv" style="display:none">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>'
-    str03 = '\n\n[侧边栏](_sidebar.md)\n'
-    str04 = '\n[我的网页](md_File/20221212-my_url.md)\n\n'
+    str02 = f'<span id="busuanzi_container_site_pv" style="display:none">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次, 本站文章数目：{len(file_list_new)}篇</span>'
+    str03 = '\n\n[侧边栏](_sidebar.md)\n\n'
+    str04 = '[我的网页](md_File/20221212-my_url.md)\n\n'
 
     content = []
     content.append(str00)
@@ -121,7 +122,18 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     content.append(str04)
 
     N_file = len(file_list_new)
-    content.append("|     " * num_row_pic + "|\n")
+    if num_row_pic % 2 == 0:
+        content.append("|     " * int(num_row_pic/2-1))
+        content.append("|[所有文章](articles_by_date.md)")
+        content.append("|     " * int(num_row_pic/2+1))
+        content.append("\n")
+
+    else:
+        content.append("|     " * int(((num_row_pic-1)/2)))
+        content.append("|[所有文章](articles_by_date.md)")
+        content.append("|     " * int(((num_row_pic-1)/2)))
+        content.append("|\n")
+
     content.append("|:---:" * num_row_pic + "|\n")
 
     # 获取图片列表
@@ -135,6 +147,16 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     pic_list = [pic_list[i] for i in sort_index]
     
 
+
+
+    # 找到文件夹图片的最小宽度，如果设置的图片宽度大于它，则以最小宽度为准
+    for ii in pic_list:
+        pic_ii_path = os.path.abspath(os.path.join("./pic/used", ii))
+        pic_width = Image.open(pic_ii_path).size[0]
+        if pic_width < width_show:
+            width_show = pic_width
+
+
     #  写表格与内容
     for ii in range(N_file):
         if ii % num_row_pic == 0 and ii != 0:  # 换行，每行固定文章数目
@@ -145,8 +167,9 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
 
         pic_ii_path = os.path.abspath(os.path.join("./pic/used", pic_list[ii]))
         pic_width = Image.open(pic_ii_path).size[0]
+        
         radio = str(int(width_show / pic_width * 100))
-        row_pic = row_pic + f'|<img src = "pic/used/{pic_list[ii]}" width = "{radio}%" height = "{radio}%">'
+        row_pic = row_pic + f'|<img src = "pic/used/{pic_list[ii]}" style="zoom:{radio}%">'
 
         # 写标题
         md_ii = file_list_new[ii]
@@ -232,7 +255,7 @@ if __name__ == "__main__":
 
 
     # 写readme文件
-    num_row_pic = 3
+    num_row_pic = 2
     width_show = 1000
     write_readme_file(file_list_new, num_row_pic, width_show)
 
