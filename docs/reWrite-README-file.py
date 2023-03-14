@@ -100,7 +100,7 @@ def cut_pic(folder, radio):
     for ii in pic_list:
         ii_path = os.path.join(folder, ii)
         img = Image.open(ii_path)
-        if abs(img.size[0]/img.size[1] - radio[0]/radio[1])>0.001:
+        if abs(img.size[0]/img.size[1] - radio[0]/radio[1])>0.1:
             cropBox = calu_pic_cropBox(img.size, radio)
             cropped = img.crop(cropBox)
             cropped.save(ii_path)
