@@ -15,11 +15,14 @@
     * [Python自动化-Selenium.md](/md_File/Python/20230314-Python自动化-Selenium.md)
     * [Python操作文件与文件夹.md](/md_File/Python/20230317-Python操作文件与文件夹.md)
 
-* [未分类]
-    * [阿里云盘与夸克网盘资源搜索.md](/md_File/未分类/20230227-阿里云盘与夸克网盘资源搜索.md)
-    * [Typora+PicGo+Gitee图床的几点记录.md](/md_File/未分类/20230228-Typora+PicGo+Gitee图床的几点记录.md)
-    * [Git安装与使用.md](/md_File/未分类/20230301-Git安装与使用.md)
-    * [ChatGPT注册与使用.md](/md_File/未分类/20230303-ChatGPT注册与使用.md)
+* [学习工作无关]
+    * [阿里云盘与夸克网盘资源搜索.md](/md_File/学习工作无关/20230227-阿里云盘与夸克网盘资源搜索.md)
+    * [利用NFC设备复制加密卡到手机或手环.md](/md_File/学习工作无关/20230318-利用NFC设备复制加密卡到手机或手环.md)
+
+* [学习工作相关]
+    * [Typora+PicGo+Gitee图床的几点记录.md](/md_File/学习工作相关/20230228-Typora+PicGo+Gitee图床的几点记录.md)
+    * [Git安装与使用.md](/md_File/学习工作相关/20230301-Git安装与使用.md)
+    * [ChatGPT注册与使用.md](/md_File/学习工作相关/20230303-ChatGPT注册与使用.md)
 
 
 * [my_url.md](/md_File/20221212-my_url.md)
