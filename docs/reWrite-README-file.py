@@ -115,6 +115,8 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
     str04 = '[我的网页](md_File/20221212-my_url.md)\n\n'
 
     content = []
+    # content.append('<link rel="stylesheet" type="text/css" href="js_css/custom.css">')
+    # content.append("\n")
     content.append(str00)
     content.append(str01)
     content.append(str02)
@@ -169,7 +171,12 @@ def write_readme_file(file_list_new, num_row_pic, width_show):
         pic_width = Image.open(pic_ii_path).size[0]
         
         radio = str(int(width_show / pic_width * 100))
-        row_pic = row_pic + f'|<img src = "pic/used/{pic_list[ii]}" style="zoom:{radio}%">'
+        # row_pic = row_pic + f'|<img src = "pic/used/{pic_list[ii]}" style="display:block; margin:0 auto; zoom:{radio}%;">'  # 不能正常显示
+        # row_pic = row_pic + f'|<img src = "pic/used/{pic_list[ii]}" style="display:block; margin:0 auto;">'   # 能正常显示
+        row_pic = row_pic + f'|<img class="modal-content" src = "pic/used/{pic_list[ii]}">'
+
+
+        
 
         # 写标题
         md_ii = file_list_new[ii]

@@ -16,3 +16,50 @@ h1, h2, h3, h4, h5, h6 {
     font-family: myFont, sans-serif;
     /*font-weight: bold;*/
 }
+
+
+
+
+/*处理点击图片后的显示问题*/
+
+/* 隐藏模态框 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* 显示模态框 */
+.modal-content {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%;
+}
+
+/* 关闭按钮 */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 当鼠标悬停在关闭按钮上时改变样式 */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
