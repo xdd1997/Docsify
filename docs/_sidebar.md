@@ -4,6 +4,7 @@
 * [CAD_CAE]
     * [color.md](/md_File/CAD_CAE/20220101-color.md)
     * [基于Sublime构建AnsysAPDL平台.md](/md_File/CAD_CAE/20220101-基于Sublime构建AnsysAPDL平台.md)
+    * [+VS2019环境下MYSTRAN的编译.md](/md_File/CAD_CAE/20230420-Win10+VS2019环境下MYSTRAN的编译.md)
 
 * [docsify]
     * [docsify+giscus.md](/md_File/docsify/20220101-docsify+giscus.md)
