@@ -32,7 +32,7 @@
    2. 改成 Release  x64
    3. 项目属性 --- C/C++ --- 常规 --- SDL 检查 --- 否
    4. 项目属性 --- C/C++ --- 预处理器 --- 预处理器定义 --- 加入：_CRT_SECURE_NO_WARNINGS
-   5. 项目属性 --- VC++目录 --- 常规 ---包含目录 --- 将 superlu_530/SRC 的绝对路径加上**(有时不加也行，有时不加会报告** No such file or directory**)**
+   5. 项目属性 --- VC++目录 --- 常规 ---包含目录 --- 将 superlu_530/SRC 的绝对路径加上 **(有时不加也行，有时不加会报告 No such file or directory)**
    6. 生成---生成解决方案，得到 SuperLU.lib
 
 1. VS---新建项目--- C++ ---Windows桌面向导---下一步---项目名称为：BLAS ---创建---应用程序类型：静态库(.lib) ---空项目---确定
@@ -47,7 +47,7 @@
 
 这个项目最终会得到 MYSTRAN.exe 程序，可用来测试代码完整性与分析代码
 
-1. 下载源码：https://github.com/MYSTRANsolver/MYSTRAN_Releases，解压后得到14.01/Source/MYSTRAN-main_10_1_2022.zip/Source 文件夹，重命名为 Source_14
+1. 下载源码：[https://github.com/MYSTRANsolver/MYSTRAN_Releases](https://github.com/MYSTRANsolver/MYSTRAN_Releases), 解压后得到14.01/Source/MYSTRAN-main_10_1_2022.zip/Source 文件夹，重命名为 Source_14
 2. VS---新建项目---Fortran---Empty Project---下一步---项目名称：MYSTRAN---创建
 3. 在项目右键---添加---Existing Items From Folder...---将 Source_14 中的代码加入项目
 4. 在项目 Source Files 右键---添加---现有项---将 Source_14/MAIN/GET_INI_FILNAM.F90 加入项目
