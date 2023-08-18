@@ -29,6 +29,4 @@
     * [ChatGPT注册与使用.md](/md_File/学习工作相关/20230303-ChatGPT注册与使用.md)
 
 
-* [my_url.md](/md_File/20221212-my_url.md)
-
 * [留言/交流.md](/md_File/20230818-chat.md)
