@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-* [留言/交流](/md_File/20230818-chat.md)
+* [留言/交流](./md_File/20230818-chat.md)
 
 * [归档](articles_by_date.md)
 
